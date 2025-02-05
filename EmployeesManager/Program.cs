@@ -27,9 +27,6 @@ app.MapGet("/", async ( HttpContext context) => {
         await context.Response.WriteAsync("""
             <!DOCTYPE html>
             <html>
-                <head>
-                    <title>Example Page</title>
-                </head>
                 <body>
                     <h1>Hello from HTML!</h1>
                 </body>
