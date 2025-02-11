@@ -58,23 +58,11 @@ UsersGroup.MapPost("/", async(
     IValidator<Employee> validator
     ) => {
 
-    var validationProblems = new List<ValidationResult>();
-    var isValid = Validator.TryValidateObject(
-        employee, 
-        new ValidationContext(employee), 
-        validationProblems, true
-    );
-    if (!isValid)
+    var validationResults = await validator.ValidateAsync(employee);
+    if (!validationResults.IsValid)
     {
-        return Results.BadRequest(validationProblems.ToValidationProblemDetails());
-
+        return Results.ValidationProblem(validationResults.ToDictionary());
     }
-
-    // var validationResults = await validator.ValidateAsync(employee);
-    // if (!validationResults.IsValid)
-    // {
-    //     return Results.ValidationProblem(validationResults.ToDictionary());
-    // }
     repository.Create(employee);
     return Results.Ok("SUCCESSSSS");
 });
