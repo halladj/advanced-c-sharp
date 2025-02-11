@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace EmployeesManager;
 
 [ApiController]
-[Route("controller")]
+[Route("[controller]")]
 public abstract class BaseController : Controller
 {
     

@@ -32,3 +32,15 @@
 /home/hambz/advanced-c-sharp/EmployeesManager/obj/Debug/net9.0/EmployeesManager.pdb
 /home/hambz/advanced-c-sharp/EmployeesManager/obj/Debug/net9.0/EmployeesManager.genruntimeconfig.cache
 /home/hambz/advanced-c-sharp/EmployeesManager/obj/Debug/net9.0/ref/EmployeesManager.dll
+/home/hambz/advanced-c-sharp/EmployeesManager/bin/Debug/net9.0/FluentValidation.dll
+/home/hambz/advanced-c-sharp/EmployeesManager/bin/Debug/net9.0/FluentValidation.DependencyInjectionExtensions.dll
+/home/hambz/advanced-c-sharp/EmployeesManager/bin/Debug/net9.0/Google.Api.CommonProtos.dll
+/home/hambz/advanced-c-sharp/EmployeesManager/bin/Debug/net9.0/Google.Protobuf.dll
+/home/hambz/advanced-c-sharp/EmployeesManager/bin/Debug/net9.0/Grpc.AspNetCore.Server.dll
+/home/hambz/advanced-c-sharp/EmployeesManager/bin/Debug/net9.0/Grpc.Core.Api.dll
+/home/hambz/advanced-c-sharp/EmployeesManager/bin/Debug/net9.0/Grpc.Net.Common.dll
+/home/hambz/advanced-c-sharp/EmployeesManager/bin/Debug/net9.0/Microsoft.AspNetCore.Grpc.JsonTranscoding.dll
+/home/hambz/advanced-c-sharp/EmployeesManager/bin/Debug/net9.0/Microsoft.AspNetCore.Grpc.Swagger.dll
+/home/hambz/advanced-c-sharp/EmployeesManager/bin/Debug/net9.0/Swashbuckle.AspNetCore.Swagger.dll
+/home/hambz/advanced-c-sharp/EmployeesManager/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/home/hambz/advanced-c-sharp/EmployeesManager/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerUI.dll

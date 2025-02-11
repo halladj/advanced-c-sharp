@@ -1,4 +1,5 @@
 using System;
+using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EmployeesManager.employee;
@@ -7,41 +8,55 @@ public class EmployeesController : BaseController
 {
 
     private readonly IRepository<Employee> _repository;
-    // private readonly IValidator<CreateEmployeeRequest> _createValidator;
+    private readonly IValidator<Employee> _createValidator;
 
     public EmployeesController(
-        IRepository<Employee> repository 
-        // IValidator<CreateEmployeeRequest> createValidator
+        IRepository<Employee> repository, 
+        IValidator<Employee> createValidator
         )
     {
         _repository = repository;
-        // _createValidator = createValidator;
+        _createValidator = createValidator;
     }
 
 
     [HttpGet]
     public IActionResult GetAll()
     {
-        return Ok();
+        return Ok(_repository.GetAll());
     }
 
     [HttpGet("{id}")]
-    public IActionResult GetById(int id)
+    public IActionResult GetById(
+        [FromRoute]int id
+    )
     {
-        return Ok();
+        return Ok(_repository.GetById(id));
     }
 
     [HttpPost]
     // public IActionResult Create(CreateEmployeeRequest employee)
-    public IActionResult Create(Employee employee)
+    public async Task<IActionResult> CreateAsync(
+        [FromBody]Employee employee
+        )
     {
-        return Ok();
+        var validationResults = await _createValidator.ValidateAsync(employee);
+        if (!validationResults.IsValid)
+        {
+            return ValidationProblem(validationResults.ToModelStateDictionary());
+        }
+        _repository.Create(employee);
+        return Ok("SUCCESSSSS");
     }
 
     [HttpPut("{id}")]
     // public IActionResult Update(int id, UpdateEmployeeRequest employee)
-    public IActionResult Update(int id, Employee employee)
+    public IActionResult Update(
+        [FromRoute]int id, 
+        [FromBody]Employee employee
+    )
     {
-        return Ok();
+        _repository.Update(employee);
+        return Ok(_repository.GetById(id));
     }
 }
