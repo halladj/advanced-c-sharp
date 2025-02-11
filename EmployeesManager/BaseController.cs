@@ -7,6 +7,5 @@ namespace EmployeesManager;
 [Route("[controller]")]
 public abstract class BaseController : Controller
 {
-    
 }
 
