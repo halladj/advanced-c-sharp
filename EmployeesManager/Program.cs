@@ -1,8 +1,10 @@
+using System.ComponentModel.DataAnnotations;
 using System.Net;
 using System.Text;
 using System.Text.Json;
 using EmployeesManager;
 using EmployeesManager.employee;
+using FluentValidation;
 using Microsoft.AspNetCore.Html;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
@@ -13,6 +15,8 @@ using Microsoft.AspNetCore.Mvc.Routing;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddSingleton<IRepository<Employee>, EmployeeRepository>();
+builder.Services.AddValidatorsFromAssemblyContaining<Program>();
+builder.Services.AddProblemDetails();
 
 var app = builder.Build();
 
@@ -48,12 +52,30 @@ UsersGroup.MapGet("/", (IRepository<Employee> repository) => {
     return Results.Ok(repository.GetAll());
 });
 
-UsersGroup.MapPost("/", (
-    [FromBody]Employee emp,
-    IRepository<Employee> repository
+UsersGroup.MapPost("/", async(
+    [FromBody]Employee employee,
+    IRepository<Employee> repository,
+    IValidator<Employee> validator
     ) => {
 
-    repository.Create(emp);
+    var validationProblems = new List<ValidationResult>();
+    var isValid = Validator.TryValidateObject(
+        employee, 
+        new ValidationContext(employee), 
+        validationProblems, true
+    );
+    if (!isValid)
+    {
+        return Results.BadRequest(validationProblems.ToValidationProblemDetails());
+
+    }
+
+    // var validationResults = await validator.ValidateAsync(employee);
+    // if (!validationResults.IsValid)
+    // {
+    //     return Results.ValidationProblem(validationResults.ToDictionary());
+    // }
+    repository.Create(employee);
     return Results.Ok("SUCCESSSSS");
 });
 
