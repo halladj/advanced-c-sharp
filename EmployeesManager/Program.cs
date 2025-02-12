@@ -18,12 +18,20 @@ app.MapGet("/", async (HttpRequest request,HttpContext context)=>{
         return Results.Ok(new Response{key = "name",value = "houssem"});
     }
 
-    //browser app (website):
-    context.Response.Headers.Append("Content-Type", "text/html; charset=utf-8");
-    await context.Response.WriteAsync("<h1>مثلا مرحبا بيك يا استاذ عندنا</h1>");
-
-    return Results.Ok();
-    
+    if (request.Headers.AcceptLanguage.Equals("ar"))
+    {
+        context.Response.Headers.Append("Content-Type", "text/html; charset=utf-8");
+        await context.Response.WriteAsync("<h1>مثلا مرحبا بيك يا استاذ عندنا</h1>");
+        return Results.Ok();
+    } else if (request.Headers.AcceptLanguage.Equals("en"))
+    {
+        context.Response.Headers.Append("Content-Type", "text/html; charset=utf-8");
+        await context.Response.WriteAsync("<h1>Welcome abourd Houssem</h1>");
+        return Results.Ok();
+    }else 
+    {
+        return Results.BadRequest("Unrecognized language");
+    }
 });
 
 app.Run();

@@ -1,32 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Hp\\Videos\\advanced-c-sharp\\EmployeesManager\\EmployeesManager.csproj": {}
+    "/home/hambz/advanced-c-sharp/EmployeesManager/EmployeesManager.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Hp\\Videos\\advanced-c-sharp\\EmployeesManager\\EmployeesManager.csproj": {
+    "/home/hambz/advanced-c-sharp/EmployeesManager/EmployeesManager.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Hp\\Videos\\advanced-c-sharp\\EmployeesManager\\EmployeesManager.csproj",
+        "projectUniqueName": "/home/hambz/advanced-c-sharp/EmployeesManager/EmployeesManager.csproj",
         "projectName": "EmployeesManager",
-        "projectPath": "C:\\Users\\Hp\\Videos\\advanced-c-sharp\\EmployeesManager\\EmployeesManager.csproj",
-        "packagesPath": "C:\\Users\\Hp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Hp\\Videos\\advanced-c-sharp\\EmployeesManager\\obj\\",
+        "projectPath": "/home/hambz/advanced-c-sharp/EmployeesManager/EmployeesManager.csproj",
+        "packagesPath": "/home/hambz/.nuget/packages/",
+        "outputPath": "/home/hambz/advanced-c-sharp/EmployeesManager/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/hambz/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -43,7 +36,7 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
+          "auditMode": "direct"
         },
         "SdkAnalysisLevel": "9.0.100"
       },
@@ -75,7 +68,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
