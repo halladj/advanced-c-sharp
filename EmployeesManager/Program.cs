@@ -14,6 +14,7 @@ app.MapGet("/", async ( HttpContext context) => {
 
     context.Response.Headers.Add("X-Custom-Header", "HeaderValue");
 
+
     // Check if client wants JSON
     if (context.Request.Headers.Accept.Any(h => h.Contains("application/json")))
     {
