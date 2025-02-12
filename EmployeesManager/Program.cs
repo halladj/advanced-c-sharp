@@ -19,8 +19,9 @@ app.MapGet("/", async (HttpRequest request,HttpContext context)=>{
     }
 
     //browser app (website):
-    context.Response.Headers.Append("content-type", "text/html");
-    await context.Response.WriteAsync("<h1>this is a title<h1/>");
+    context.Response.Headers.Append("Content-Type", "text/html; charset=utf-8");
+    await context.Response.WriteAsync("<h1>مثلا مرحبا بيك يا استاذ عندنا</h1>");
+
     return Results.Ok();
     
 });
