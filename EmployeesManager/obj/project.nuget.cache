@@ -1,11 +1,26 @@
 {
   "version": 2,
-  "dgSpecHash": "0NP2YeESots=",
+  "dgSpecHash": "ECRxivn7CBk=",
   "success": true,
-  "projectFilePath": "/home/hambz/advanced-c-sharp/EmployeesManager/EmployeesManager.csproj",
+  "projectFilePath": "C:\\Users\\Hp\\Videos\\advanced-c-sharp\\EmployeesManager\\EmployeesManager.csproj",
   "expectedPackageFiles": [
-    "/home/hambz/.nuget/packages/microsoft.aspnetcore.openapi/9.0.0/microsoft.aspnetcore.openapi.9.0.0.nupkg.sha512",
-    "/home/hambz/.nuget/packages/microsoft.openapi/1.6.17/microsoft.openapi.1.6.17.nupkg.sha512"
+    "C:\\Users\\Hp\\.nuget\\packages\\fluentvalidation\\12.0.0-preview1\\fluentvalidation.12.0.0-preview1.nupkg.sha512",
+    "C:\\Users\\Hp\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\12.0.0-preview1\\fluentvalidation.dependencyinjectionextensions.12.0.0-preview1.nupkg.sha512",
+    "C:\\Users\\Hp\\.nuget\\packages\\google.api.commonprotos\\2.15.0\\google.api.commonprotos.2.15.0.nupkg.sha512",
+    "C:\\Users\\Hp\\.nuget\\packages\\google.protobuf\\3.27.0\\google.protobuf.3.27.0.nupkg.sha512",
+    "C:\\Users\\Hp\\.nuget\\packages\\grpc.aspnetcore.server\\2.64.0\\grpc.aspnetcore.server.2.64.0.nupkg.sha512",
+    "C:\\Users\\Hp\\.nuget\\packages\\grpc.core.api\\2.64.0\\grpc.core.api.2.64.0.nupkg.sha512",
+    "C:\\Users\\Hp\\.nuget\\packages\\grpc.net.common\\2.64.0\\grpc.net.common.2.64.0.nupkg.sha512",
+    "C:\\Users\\Hp\\.nuget\\packages\\microsoft.aspnetcore.grpc.jsontranscoding\\9.0.2\\microsoft.aspnetcore.grpc.jsontranscoding.9.0.2.nupkg.sha512",
+    "C:\\Users\\Hp\\.nuget\\packages\\microsoft.aspnetcore.grpc.swagger\\0.9.2\\microsoft.aspnetcore.grpc.swagger.0.9.2.nupkg.sha512",
+    "C:\\Users\\Hp\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.0\\microsoft.aspnetcore.openapi.9.0.0.nupkg.sha512",
+    "C:\\Users\\Hp\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\Hp\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.1.0\\microsoft.extensions.dependencyinjection.abstractions.2.1.0.nupkg.sha512",
+    "C:\\Users\\Hp\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512",
+    "C:\\Users\\Hp\\.nuget\\packages\\swashbuckle.aspnetcore\\6.6.2\\swashbuckle.aspnetcore.6.6.2.nupkg.sha512",
+    "C:\\Users\\Hp\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.6.2\\swashbuckle.aspnetcore.swagger.6.6.2.nupkg.sha512",
+    "C:\\Users\\Hp\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.6.2\\swashbuckle.aspnetcore.swaggergen.6.6.2.nupkg.sha512",
+    "C:\\Users\\Hp\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.6.2\\swashbuckle.aspnetcore.swaggerui.6.6.2.nupkg.sha512"
   ],
   "logs": []
 }
