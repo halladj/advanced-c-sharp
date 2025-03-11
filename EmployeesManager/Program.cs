@@ -17,6 +17,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddSingleton<IRepository<Employee>, EmployeeRepository>();
 builder.Services.AddValidatorsFromAssemblyContaining<Program>();
 builder.Services.AddControllers();
+// builder.Services.AddRazorPages();
+builder.Services.AddControllersWithViews();
 builder.Services.AddSwaggerGen();
 builder.Services.AddProblemDetails();
 
