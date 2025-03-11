@@ -8,11 +8,33 @@
     ".NETCoreApp,Version=v9.0": {
       "EmployeesManager/1.0.0": {
         "dependencies": {
+          "FluentValidation": "12.0.0-preview1",
+          "FluentValidation.DependencyInjectionExtensions": "12.0.0-preview1",
           "Microsoft.AspNetCore.Grpc.Swagger": "0.9.2",
           "Microsoft.AspNetCore.OpenApi": "9.0.1"
         },
         "runtime": {
           "EmployeesManager.dll": {}
+        }
+      },
+      "FluentValidation/12.0.0-preview1": {
+        "runtime": {
+          "lib/net8.0/FluentValidation.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.0.0"
+          }
+        }
+      },
+      "FluentValidation.DependencyInjectionExtensions/12.0.0-preview1": {
+        "dependencies": {
+          "FluentValidation": "12.0.0-preview1",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.1.0"
+        },
+        "runtime": {
+          "lib/net8.0/FluentValidation.DependencyInjectionExtensions.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.0.0"
+          }
         }
       },
       "Google.Api.CommonProtos/2.15.0": {
@@ -101,6 +123,7 @@
         }
       },
       "Microsoft.Extensions.ApiDescription.Server/6.0.5": {},
+      "Microsoft.Extensions.DependencyInjection.Abstractions/2.1.0": {},
       "Microsoft.OpenApi/1.6.17": {
         "runtime": {
           "lib/netstandard2.0/Microsoft.OpenApi.dll": {
@@ -154,6 +177,20 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "FluentValidation/12.0.0-preview1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-sFp+S7r98V0RQd6Ws9ecFTneWGGMK69XA4Wq+2ZxuNzoRTcs6AbZFyb+pfCwOUx4zgJiKf6BjcFSQrrAaxn+Dw==",
+      "path": "fluentvalidation/12.0.0-preview1",
+      "hashPath": "fluentvalidation.12.0.0-preview1.nupkg.sha512"
+    },
+    "FluentValidation.DependencyInjectionExtensions/12.0.0-preview1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5MGzsWERL7C+bbsVW2rZhYpPv+e3Tpy5w+BcHaSN4ziuM9qkWJd7Of0v5naYJxewEbpZ3oT3WbBO+WikxO9irQ==",
+      "path": "fluentvalidation.dependencyinjectionextensions/12.0.0-preview1",
+      "hashPath": "fluentvalidation.dependencyinjectionextensions.12.0.0-preview1.nupkg.sha512"
     },
     "Google.Api.CommonProtos/2.15.0": {
       "type": "package",
@@ -217,6 +254,13 @@
       "sha512": "sha512-Ckb5EDBUNJdFWyajfXzUIMRkhf52fHZOQuuZg/oiu8y7zDCVwD0iHhew6MnThjHmevanpxL3f5ci2TtHQEN6bw==",
       "path": "microsoft.extensions.apidescription.server/6.0.5",
       "hashPath": "microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512"
+    },
+    "Microsoft.Extensions.DependencyInjection.Abstractions/2.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8/CtASu80UIoyG+r8FstrmZW5GLtXxzoYpjj3jV0FKZCL5CiFgSH3pAmqut/dC68mu7N1bU6v0UtKKL3gCUQGQ==",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/2.1.0",
+      "hashPath": "microsoft.extensions.dependencyinjection.abstractions.2.1.0.nupkg.sha512"
     },
     "Microsoft.OpenApi/1.6.17": {
       "type": "package",

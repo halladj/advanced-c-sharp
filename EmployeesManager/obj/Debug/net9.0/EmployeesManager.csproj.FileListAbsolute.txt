@@ -42,3 +42,5 @@
 /home/hambz/advanced-c-sharp/EmployeesManager/bin/Debug/net9.0/Swashbuckle.AspNetCore.Swagger.dll
 /home/hambz/advanced-c-sharp/EmployeesManager/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerGen.dll
 /home/hambz/advanced-c-sharp/EmployeesManager/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/home/hambz/advanced-c-sharp/EmployeesManager/bin/Debug/net9.0/FluentValidation.dll
+/home/hambz/advanced-c-sharp/EmployeesManager/bin/Debug/net9.0/FluentValidation.DependencyInjectionExtensions.dll

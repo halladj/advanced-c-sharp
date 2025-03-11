@@ -2,7 +2,7 @@ using System;
 
 namespace EmployeesManager.Product;
 
-public class UserRepository : IRepository<Product>
+public class ProductRepository : IRepository<Product>
 {
     public void Create(Product entity)
     {

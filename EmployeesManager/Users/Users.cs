@@ -1,6 +1,4 @@
-using System;
-using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
+using FluentValidation;
 
 namespace EmployeesManager.Users;
 
@@ -8,10 +6,16 @@ public class Users
 {
 
     public int id {get; set;}
-    [Required]
     public string username {get; set;}
-    [Required]
     public string password {get; set;}
-    [Required, EmailAddress]
     public string email {get; set;}
+}
+
+public class CreateUserValidator: AbstractValidator<Users>{
+    public CreateUserValidator()
+    {
+        RuleFor(x => x.username).NotEmpty(); 
+        RuleFor(x => x.password).NotEmpty(); 
+        RuleFor(x => x.email).NotEmpty().EmailAddress(); 
+    }
 }
