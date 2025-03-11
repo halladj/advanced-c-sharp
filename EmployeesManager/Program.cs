@@ -1,39 +1,82 @@
-using System.Net;
-using System.Text;
-using System.Text.Json;
-using Microsoft.AspNetCore.Html;
-using Microsoft.AspNetCore.Http.HttpResults;
-using Microsoft.AspNetCore.Mvc.Routing;
+using System.ComponentModel.DataAnnotations;
+using EmployeesManager;
+using EmployeesManager.Users;
+using Microsoft.AspNetCore.Mvc;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddSingleton<IRepository<Users>, UserRepository>();
+builder.Services.AddSwaggerGen();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddProblemDetails();
+
 var app = builder.Build();
 
-app.MapGet("/", async ( HttpContext context) => {
-    //TODO: add support to arabic langauge via headers.
 
-    context.Response.Headers.Add("X-Custom-Header", "HeaderValue");
+if (app.Environment.IsDevelopment()){
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
 
+var usersGroup = app.MapGroup("/users");
 
-    // Check if client wants JSON
-    if (context.Request.Headers.Accept.Any(h => h.Contains("application/json")))
+usersGroup.MapGet("/", (
+    IRepository<Users> r
+) => {
+    return Results.Ok(r.GetAll());    
+});
+
+usersGroup.MapPost("/", (
+    [FromBody]Users user,
+    IRepository<Users> r
+    ) => {
+
+    var validationProblems = new List<ValidationResult>();
+    var isValid = Validator.TryValidateObject(
+        user,
+        new ValidationContext(user),
+        validationProblems,
+        true
+    );
+
+    if (!isValid)
     {
-        context.Response.ContentType = "application/json";
-        await context.Response.WriteAsJsonAsync(new SpecialResponse{Key="key", Value="value"});
+        return Results.BadRequest(validationProblems);
     }
-    else
-    {
-        // Set HTML response
-        context.Response.ContentType = "text/html";
-        await context.Response.WriteAsync("""
-            <!DOCTYPE html>
-            <html>
-                <body>
-                    <h1>Hello from HTML!</h1>
-                </body>
-            </html>
-        """);
+
+    r.Create(user);
+    return Results.Ok("success");    
+});
+
+usersGroup.MapGet("/{id}", (
+    [FromRoute]int id,
+    IRepository<Users> r
+) => {
+    var user = r.GetById(id);
+    Console.WriteLine(r.GetById(id));
+    if (user != null){
+        return Results.Ok(user);
     }
+    return Results.NotFound("User Not Found");
+});
+
+
+usersGroup.MapPut("/users/{id}", (
+    [FromRoute]int id,
+    [FromBody] Users user,
+    IRepository<Users> r
+    ) => {
+    r.Update(user);
+    return Results.Ok("success");    
+});
+
+usersGroup.MapDelete("/users/{id}", (
+    [FromRoute]int id,
+    [FromBody] Users user,
+    IRepository<Users> r
+    ) => {
+    r.Delete(user);
+    return Results.Ok("success");    
 });
 
 app.Run();
@@ -42,9 +85,3 @@ app.Run();
 
 
 
-public class SpecialResponse
-{
-    public string? Key { get; set; }  
-    public string? Value { get; set; } 
-    
-}
