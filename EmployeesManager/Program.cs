@@ -11,6 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddSwaggerGen();
 builder.Services.AddEndpointsApiExplorer(); 
 builder.Services.AddControllers();
+builder.Services.AddControllersWithViews();
 builder.Services.AddProblemDetails();
 builder.Services.AddValidatorsFromAssemblyContaining<Program>();
 builder.Services.AddSingleton<IRepository<Users>,UserRepository>();

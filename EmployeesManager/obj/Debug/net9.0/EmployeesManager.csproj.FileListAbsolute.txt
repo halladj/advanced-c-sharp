@@ -112,3 +112,5 @@ C:\Users\Hp\Videos\advanced-c-sharp\EmployeesManager\bin\Debug\net9.0\Swashbuckl
 C:\Users\Hp\Videos\advanced-c-sharp\EmployeesManager\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\Hp\Videos\advanced-c-sharp\EmployeesManager\bin\Debug\net9.0\FluentValidation.dll
 C:\Users\Hp\Videos\advanced-c-sharp\EmployeesManager\bin\Debug\net9.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\Hp\Videos\advanced-c-sharp\EmployeesManager\obj\Debug\net9.0\EmployeesManager.RazorAssemblyInfo.cache
+C:\Users\Hp\Videos\advanced-c-sharp\EmployeesManager\obj\Debug\net9.0\EmployeesManager.RazorAssemblyInfo.cs
