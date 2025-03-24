@@ -9,14 +9,20 @@ namespace EmployeesManager.Users
     public class UsersController : ControllerBase
     {
         private readonly IRepository<Users> _repository;
-        private readonly IValidator<Users> _validator;
+        private readonly IValidator<CreareUserRequest> _postValidator;
+        private readonly IValidator<DeleteUserRequest> _deleteValidator;
+        private readonly IValidator<UpdateUserRequest> _updateValidator;
 
         public UsersController(
             IRepository<Users> repository,
-            IValidator<Users> validator
+            IValidator<CreareUserRequest> postvalidator,
+            IValidator<DeleteUserRequest> deletevalidator,
+            IValidator<UpdateUserRequest> updatevalidator
         ){
-            _repository = repository;
-            _validator  = validator;
+            _repository     = repository;
+            _postValidator  = postvalidator;
+            _updateValidator= updatevalidator;
+            _deleteValidator= deletevalidator;
         }
 
         [HttpGet]
@@ -36,7 +42,7 @@ namespace EmployeesManager.Users
             [FromBody] Users user
         )
         {
-            var validationResults = await _validator.ValidateAsync(user);
+            var validationResults = await _postValidator.ValidateAsync(user);
             if (!validationResults.IsValid)
             {
                 return ValidationProblem(
@@ -49,20 +55,34 @@ namespace EmployeesManager.Users
         }
 
         [HttpPut("{id}")]
-        public IActionResult Update(
+        public async Task<IActionResult> Update(
             [FromRoute] int id,
-            [FromBody] Users user
+            [FromBody] UpdateUserRequest user
         )
         {
+            var validationResults = await _updateValidator.ValidateAsync(user);
+            if (!validationResults.IsValid)
+            {
+                return ValidationProblem(
+                    validationResults.ToModelStateDictionary()
+                );
+            }
             _repository.Update(user);
             return Ok(_repository.GetById(id));
         }
 
         [HttpDelete]
-        public IActionResult Delete(
-            [FromBody] Users user
+        public async Task<IActionResult> Delete(
+            [FromBody] DeleteUserRequest user
         )
         {
+            var validationResults = await _deleteValidator.ValidateAsync(user);
+            if (!validationResults.IsValid)
+            {
+                return ValidationProblem(
+                    validationResults.ToModelStateDictionary()
+                );
+            }
             _repository.Delete(user);
             return Ok("Success");
         }
