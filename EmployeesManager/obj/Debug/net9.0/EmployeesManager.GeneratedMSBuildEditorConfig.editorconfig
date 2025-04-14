@@ -23,3 +23,11 @@ build_property.EnableCodeStyleSeverity =
 [/home/hambz/advanced-c-sharp/EmployeesManager/Views/HelloWorld/index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSGVsbG9Xb3JsZC9pbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
+
+[/home/hambz/advanced-c-sharp/EmployeesManager/Views/Product/GetById.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdC9HZXRCeUlkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/hambz/advanced-c-sharp/EmployeesManager/Views/Product/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdC9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

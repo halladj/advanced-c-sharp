@@ -1,12 +1,125 @@
 {
   "Version": 1,
-  "Hash": "6/HxR8N5lShL227QELGg9f/PrppPJpaTuBhdRKM0PfY=",
+  "Hash": "yxT1kqgt5Qt2VJul4aBy4+5dIGBtpx6W/DvS/XShKHc=",
   "Source": "EmployeesManager",
   "BasePath": "_content/EmployeesManager",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "EmployeesManager/wwwroot",
+      "Source": "EmployeesManager",
+      "ContentRoot": "/home/hambz/advanced-c-sharp/EmployeesManager/wwwroot/",
+      "BasePath": "_content/EmployeesManager",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "/home/hambz/advanced-c-sharp/EmployeesManager/wwwroot/images/Untitled.jpeg",
+      "SourceId": "EmployeesManager",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/hambz/advanced-c-sharp/EmployeesManager/wwwroot/",
+      "BasePath": "_content/EmployeesManager",
+      "RelativePath": "images/Untitled#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "tutgg3bn7k",
+      "Integrity": "25jVLOXZHlG/cY1h8ycRwphBDDmJwHS12LiZ+IRNds4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/Untitled.jpeg"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "images/Untitled.jpeg",
+      "AssetFile": "/home/hambz/advanced-c-sharp/EmployeesManager/wwwroot/images/Untitled.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3246"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"25jVLOXZHlG/cY1h8ycRwphBDDmJwHS12LiZ+IRNds4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 08 Apr 2025 10:20:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-25jVLOXZHlG/cY1h8ycRwphBDDmJwHS12LiZ+IRNds4="
+        }
+      ]
+    },
+    {
+      "Route": "images/Untitled.tutgg3bn7k.jpeg",
+      "AssetFile": "/home/hambz/advanced-c-sharp/EmployeesManager/wwwroot/images/Untitled.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3246"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"25jVLOXZHlG/cY1h8ycRwphBDDmJwHS12LiZ+IRNds4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 08 Apr 2025 10:20:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "tutgg3bn7k"
+        },
+        {
+          "Name": "label",
+          "Value": "images/Untitled.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-25jVLOXZHlG/cY1h8ycRwphBDDmJwHS12LiZ+IRNds4="
+        }
+      ]
+    }
+  ]
 }

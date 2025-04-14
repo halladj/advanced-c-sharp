@@ -39,10 +39,10 @@ namespace EmployeesManager.Users
 
         [HttpPost]
         public async Task<IActionResult> CreateUser(
-            [FromBody] Users user
+            [FromBody] CreareUserRequest user
         )
         {
-            var validationResults = await _postValidator.ValidateAsync(user);
+            var validationResults = await _postValidator.ValidateAsync((IValidationContext)user);
             if (!validationResults.IsValid)
             {
                 return ValidationProblem(
@@ -50,17 +50,25 @@ namespace EmployeesManager.Users
                 );
             }
 
-            _repository.Create(user);
+            var newUser = new Users
+            {
+                username = user.username,
+                password = user.password,
+                email    = user.email
+
+
+            };
+            _repository.Create(newUser);
             return Ok("success");
         }
 
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(
             [FromRoute] int id,
-            [FromBody] UpdateUserRequest user
+            [FromBody] Users user
         )
         {
-            var validationResults = await _updateValidator.ValidateAsync(user);
+            var validationResults = await _updateValidator.ValidateAsync((IValidationContext)user);
             if (!validationResults.IsValid)
             {
                 return ValidationProblem(
@@ -73,10 +81,10 @@ namespace EmployeesManager.Users
 
         [HttpDelete]
         public async Task<IActionResult> Delete(
-            [FromBody] DeleteUserRequest user
+            [FromBody] Users user
         )
         {
-            var validationResults = await _deleteValidator.ValidateAsync(user);
+            var validationResults = await _deleteValidator.ValidateAsync((IValidationContext)user);
             if (!validationResults.IsValid)
             {
                 return ValidationProblem(

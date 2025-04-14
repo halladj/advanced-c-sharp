@@ -46,3 +46,4 @@
 /home/hambz/advanced-c-sharp/EmployeesManager/bin/Debug/net9.0/FluentValidation.DependencyInjectionExtensions.dll
 /home/hambz/advanced-c-sharp/EmployeesManager/obj/Debug/net9.0/EmployeesManager.RazorAssemblyInfo.cache
 /home/hambz/advanced-c-sharp/EmployeesManager/obj/Debug/net9.0/EmployeesManager.RazorAssemblyInfo.cs
+/home/hambz/advanced-c-sharp/EmployeesManager/bin/Debug/net9.0/EmployeesManager.staticwebassets.runtime.json

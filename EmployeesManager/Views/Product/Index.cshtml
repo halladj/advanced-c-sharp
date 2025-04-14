@@ -1,0 +1,61 @@
+﻿@using EmployeesManager.Product; 
+@{
+
+    ViewData["Title"] = "Product page";
+    var user = "";
+
+    Products[] products = ViewData["products"] as Products[] ?? throw new ArgumentException();
+    
+}
+<h1>@ViewData["Title"]</h1>
+@if(user != ""){
+    <h2>My student is @user</h2>
+}else{
+    <h2>student not found</h2>
+}
+
+
+<ul>
+@for(int i = 0; i <= 4; i++)
+{
+    <li>number= @i</li>
+}
+</ul>
+
+@if(products != null){
+
+    @for(var i=0; i<products.Length; i++ ){
+        <div class="product-card">
+            <img src="~/images/Untitled.jpeg" alt="Product Image" class="product-image" />
+            <p><strong>@products[i].Id</strong> </p>
+            <p><strong>@products[i].Name</strong> </p>
+            <p><strong>@products[i].Price</strong> </p>
+        </div>
+    }
+}else{
+    <p>not found</p>
+}
+
+
+
+
+<style>
+    .product-card {
+        border: 1px solid #ddd;
+        padding: 1rem;
+        margin: 1rem 0;
+        border-radius: 8px;
+        max-width: 300px;
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .product-image {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+    }
+</style>
+

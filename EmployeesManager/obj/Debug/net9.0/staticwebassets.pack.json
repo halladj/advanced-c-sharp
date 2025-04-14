@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "/home/hambz/advanced-c-sharp/EmployeesManager/wwwroot/images/Untitled.jpeg",
+      "PackagePath": "staticwebassets/images/Untitled.jpeg"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.EmployeesManager.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.EmployeesManager.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.build.EmployeesManager.props",
+      "PackagePath": "build\\EmployeesManager.props"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.buildMultiTargeting.EmployeesManager.props",
+      "PackagePath": "buildMultiTargeting\\EmployeesManager.props"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.buildTransitive.EmployeesManager.props",
+      "PackagePath": "buildTransitive\\EmployeesManager.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
