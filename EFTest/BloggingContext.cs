@@ -6,7 +6,7 @@ namespace EFTest;
 
 public class BloggingContext: DbContext
 {
-     static readonly string connectionString = "Server=localhost; User ID=root; Password=socode; Database=blog";
+    static readonly string connectionString = "Server=localhost; User ID=root; Password=socode; Database=blog";
     // here we define the DBSets <tables>.
     public DbSet<Blog> Blogs {get; set;}
     public DbSet<Post> Posts{get; set;}
